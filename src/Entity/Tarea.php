@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TareaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -37,6 +39,14 @@ class Tarea
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $file = null;
+
+    #[ORM\ManyToMany(targetEntity: Usuario::class, inversedBy: 'tareas')]
+    private Collection $usuarios;
+
+    public function __construct()
+    {
+        $this->usuarios = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -135,6 +145,30 @@ class Tarea
     public function setFile(?string $file): self
     {
         $this->file = $file;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Usuario>
+     */
+    public function getUsuarios(): Collection
+    {
+        return $this->usuarios;
+    }
+
+    public function addUsuario(Usuario $usuario): self
+    {
+        if (!$this->usuarios->contains($usuario)) {
+            $this->usuarios->add($usuario);
+        }
+
+        return $this;
+    }
+
+    public function removeUsuario(Usuario $usuario): self
+    {
+        $this->usuarios->removeElement($usuario);
 
         return $this;
     }

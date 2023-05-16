@@ -11,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ActualizarController extends AbstractController{
     #[Route("/tarea/actualizar/{id}")]
     public function start(int $id, TareaRepository $tareaRepository, Request $request){
+        $this->denyAccessUnlessGranted("IS_AUTHENTICATED_FULLY");
         $tarea = $tareaRepository->find($id);
         if(!$tarea){
             

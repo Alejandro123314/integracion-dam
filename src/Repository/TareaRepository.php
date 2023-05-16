@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Tarea;
+use App\Entity\Usuario;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -39,10 +40,20 @@ class TareaRepository extends ServiceEntityRepository
         }
     }
 
-    public function filtrar(?string $filtro, ?string $orden)
+    public function filtrar(Usuario $usuario,  ?string $filtro, ?string $orden)
     {
         $consulta = $this->createQueryBuilder("t");
 
+        $tareas = $usuario->getTareas();
+        $tareasIdes = [];
+        if(count($tareas) == 0){
+            return[];
+        }
+        foreach ($tareas as &$tarea){
+            array_push($tareasIdes, $tarea->getId());
+        }
+
+        $consulta->andWhere($consulta->expr()->in("t.id",$tareasIdes));
         if ($filtro && $filtro != "1") {
             switch ($filtro) {
                 case '2':
@@ -73,6 +84,7 @@ class TareaRepository extends ServiceEntityRepository
                     break;
             }
         }
+        
         return $consulta->getQuery()->getResult();
     }
 

@@ -7,6 +7,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: tareas
+      MYSQL_USER: prueba
+      MYSQL_PASSWORD: password
     ports:
       # To allow the host machine to access the ports below, modify the lines below.
       # For example, to allow the host to connect to port 3306 on the container, you would change
@@ -15,9 +17,23 @@ services:
       - '3306:3306' 
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
+    volumes:
+      - db_data:/var/lib/mysql
+
+
 ###< doctrine/doctrine-bundle ###
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: database
+      PMA_USER: prueba
+      PMA_PASSWORD: password 
 
 volumes:
 ###> doctrine/doctrine-bundle ###
-  database_data:
+  db_data:
 ###< doctrine/doctrine-bundle ###
