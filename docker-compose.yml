@@ -3,7 +3,7 @@ version: '3'
 services:
 ###> doctrine/doctrine-bundle ###
   database:
-    image: 'mysql:latest'
+    image: 'mysql:8'
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: tareas
@@ -19,7 +19,6 @@ services:
       # - ./docker/db/data:/var/lib/postgresql/data:rw
     volumes:
       - db_data:/var/lib/mysql
-
 
 ###< doctrine/doctrine-bundle ###
   phpmyadmin:

@@ -2,5 +2,172 @@
 
 
 {% block body %}
-<h1> inicio </h1>
+	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" height="20%">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			<img src="imagenes/Todo.jpg" width="100%"/>
+				{# <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveaspectratio="xMidYMid slice" focusable="false">
+					<rect width="100%" height="100%" fill="#777"></rect>
+				</svg> #}
+				<div class="container">
+					<div class="carousel-caption text-start">
+						<h1>Ejemplo de encabezado.</h1>
+						<p>Algo de contenido placeholder representativo para la primera diapositiva del carrusel.</p>
+						<p>
+							<a class="btn btn-lg btn-primary" href="#">Regístrate hoy</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveaspectratio="xMidYMid slice" focusable="false">
+					<rect width="100%" height="100%" fill="#777"></rect>
+				</svg>
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Otro titular de ejemplo.</h1>
+						<p>Algo de contenido placeholder representativo para la segunda diapositiva del carrusel.</p>
+						<p>
+							<a class="btn btn-lg btn-primary" href="#">Más información</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveaspectratio="xMidYMid slice" focusable="false">
+					<rect width="100%" height="100%" fill="#777"></rect>
+				</svg>
+				<div class="container">
+					<div class="carousel-caption text-end">
+						<h1>Uno más por si acaso.</h1>
+						<p>Algo de contenido placeholder representativo para la tercera diapositiva de este carrusel.</p>
+						<p>
+							<a class="btn btn-lg btn-primary" href="#">Explorar galería</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Anterior</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Siguiente</span>
+		</button>
+	</div>
+
+
+	<div class="container marketing text-white">
+
+		<div class="row">
+			<div class="col-lg-4">
+				<i class="fa-solid fa-people-group fa-9x"></i>
+				{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveaspectratio="xMidYMid slice" focusable="false">
+									<title>Placeholder</title>
+									<rect width="100%" height="100%" fill="#777"></rect>
+									<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+								</svg> #}
+				<h2 class="text-white">Encabezado</h2>
+				<p class="text-white">Algo de contenidoplaceholder representativo para las tres columnas de texto debajo del carrusel. Esta es la primera columna.</p>
+
+			</div>
+			<div class="col-lg-4">
+				<i class="fa-solid fa-lock fa-9x"></i>
+				{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveaspectratio="xMidYMid slice" focusable="false">
+									<title>Placeholder</title>
+									<rect width="100%" height="100%" fill="#777"></rect>
+									<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+								</svg> #}
+				<h2 class="text-white">Encabezado</h2>
+				<p>Otro fragmento emocionante de contenidoplaceholder representativo. Esta vez, pasamos a la segunda columna.</p>
+
+			</div>
+			<div class="col-lg-4">
+				<i class="fa-solid fa-table-list fa-9x"></i>
+				{# <svg preserveaspectratio="xMidYMid slice" focusable="false" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="
+									http://www.w3.org/2000/svg
+									" viewbox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 0v64h64V96H64zm384 0H192v64H448V96zM64 224v64h64V224H64zm384 0H192v64H448V224zM64 352v64h64V352H64zm384 0H192v64H448V352z"/></svg> #}
+				{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveaspectratio="xMidYMid slice" focusable="false">
+									<title>Placeholder</title>
+									<rect width="100%" height="100%" fill="#777"></rect>
+									<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+								</svg> #}
+				<h2>Encabezado</h2>
+				<p>Y, por último, esta, la tercera columna de contenidoplaceholder representativo.</p>
+
+			</div>
+		</div>
+
+		<hr class="featurette-divider">
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading">Encabezado del primer reportaje.
+				</h2>
+				<p class="lead">Excelente contenido de marcador de posición para el primer artículo aquí. Imagina algo de prosa emocionante aquí.</p>
+			</div>
+			<div class="col-md-5">
+				<img
+				src="imagenes/Loguear.png" width="100%"/>
+			{# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveaspectratio="xMidYMid slice" focusable="false">
+											<title>Placeholder</title>
+											<rect width="100%" height="100%" fill="#eee"></rect>
+											<text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+										</svg> #}
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette">
+			<div class="col-md-7 order-md-2">
+				<h2 class="featurette-heading">Oh, sí, es tan bueno.
+				</h2>
+				<p class="lead">¿Otro reportaje? Por supuesto. Más contenido de marcador de posición aquí para darle una idea de cómo funcionaría este diseño con algún contenido del mundo real en su lugar.</p>
+			</div>
+			<div class="col-md-5 order-md-1">
+				<img
+				src="imagenes/Tareas.png" width="100%"/>
+			{# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveaspectratio="xMidYMid slice" focusable="false">
+											<title>Placeholder</title>
+											<rect width="100%" height="100%" fill="#eee"></rect>
+											<text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+										</svg> #}
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading">Modificar Tarea.
+				</h2>
+				<p class="lead">Las tareas a modificar con su contenido</p>
+			</div>
+			<div class="col-md-5">
+				<img src="imagenes/Editar.png" width="100%"/>
+			{# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveaspectratio="xMidYMid slice" focusable="false">
+											<title>Placeholder</title>
+											{# <rect width="100%" height="100%" fill="#eee"></rect> #}
+				{# <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> #}
+				{# </svg> #}
+			</div>
+		</div>
+		<hr class="featurette-divider">
+
+	</div>
+
+	<footer class="container">
+		<p class="float-end">
+			<a href="#">Ir arriba</a>
+		</p>
+		<p>© 2023 ToDoList, Inc. ·
+			<a href="#">Privacidad</a>
+			·
+			<a href="#">Términos</a>
+		</p>
+	</footer>
+
 {% endblock %}

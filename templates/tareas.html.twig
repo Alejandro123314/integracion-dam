@@ -14,18 +14,18 @@
 
 							<p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
 								<i class="fas fa-check-square me-1"></i>
-								<u>My Todo-s</u>
+								<u>Mis Tareas</u>
 							</p>
 
 							<div class="pb-2">
 								<div class="card">
 									<div class="card-body">
 										<div class="d-flex flex-row align-items-center">
-											<input type="text" class="form-control form-control-lg" id="titulo" placeholder="Add new...">
+											<input type="text" class="form-control form-control-lg" id="titulo" placeholder="Añadir nuevo...">
 											{# <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i #}
 											{# class="fas fa-calendar-alt fa-lg me-3"></i></a> #}
 												<div>
-													<button type="button" class="btn btn-primary" id="crearButton"> Add</button>
+													<button type="button" class="btn btn-primary" id="crearButton"> Añadir</button>
 											</div>
 										</div>
 									</div>
@@ -36,7 +36,7 @@
 
 							<form id="formFiltro" method="POST" action="{{path('app_tareas_start')}}">
 								<div class="d-flex justify-content-end align-items-center mb-4 pt-2 pb-3">
-									<p class="small mb-0 me-2 text-muted">Filter</p>
+									<p class="small mb-0 me-2 text-muted">Filtros</p>
 									<select class="select" name="filtro">
 										<option value="1">Todos</option>
 										<option value="2">Completado</option>
@@ -44,7 +44,7 @@
 										<option value="4">Media</option>
 										<option value="5">Baja</option>
 									</select>
-									<p class="small mb-0 ms-4 me-2 text-muted">Sort</p>
+									<p class="small mb-0 ms-4 me-2 text-muted">Ordenar</p>
 									<select class="select" name="orden">
 										<option value="1">Fecha creación</option>
 										<option value="2">Fecha recordatorio</option>

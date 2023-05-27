@@ -13,15 +13,15 @@
 
 				{{ form_start(registrationForm) }}
                 <div class="col-xl-9">
-                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Registrar</h1>
 				{{ form_row(registrationForm.email, {"attr":{"class":"form-control"}}) }}
 				{{ form_row(registrationForm.plainPassword, {
-            label: 'Password', 
+            label: 'Contraseña', 
             attr:{"class":"form-control"}
         }) }}
-				{{ form_row(registrationForm.agreeTerms) }}
+				{{ form_row(registrationForm.agreeTerms, {label: 'Aceptar condiciones'}) }}
 
-				<button type="submit" class="btn btn-lg btn-primary">Register</button>
+				<button type="submit" class="btn btn-lg btn-primary">Registrar</button>
                 </div>
 				{{ form_end(registrationForm) }}
 			</div>
