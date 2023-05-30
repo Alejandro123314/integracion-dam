@@ -26,8 +26,11 @@ class ActualizarController extends AbstractController{
         $recordatorio = $request->request->get("recordatorio");
         $fichero = $request->files->get("fichero");
 
-        var_dump($fichero);
-
+        /**
+         * @Alejandro 
+         * 
+         * Se genera un identificador único para cada fichero y posteriormente se relaciona con el usuario
+         */
         if($fichero){
             $nombreFichero = Uuid::v4() . "." . $fichero->getClientOriginalExtension();
             $fichero->move($this->getParameter("files_directory"), $nombreFichero);
